@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Crystal Scans Code Prototype - 2</title>
+	<link rel="stylesheet" href="CS_Ptype_1_Styles.css">
+</head>
+<body>
+<div id="test-wrapper_1">
+<div id="CS_Service-Viewer-Wrapper">
+	<div id="CS-Service_Viewer_Col-left">
+		<ul id="CS-Services_Button_List">
+			<li class="SL-Active_Trigger">
+				<button id="btn-ultrasound" onclick="Services_List_Trigger(this)" class="Services_Button SB-Active_Trigger">Ultrasound</button>
+      			<span class="Services_Button-Pointer_Element"></span>
+      		</li>
+      		<li>
+      			<button id="btn-color-doppler" onclick="Services_List_Trigger(this)" class="Services_Button">Color Doppler</button>
+      		</li>
+      		<li>
+      			<button id="btn-echocardiogram" onclick="Services_List_Trigger(this)" class="Services_Button">Echocardiogram</button>
+      		</li>
+      		<li>
+      			<button id="btn-digital-radiography" onclick="Services_List_Trigger(this)" class="Services_Button">Digital Radiography</button>
+      		</li>
+      		<li>
+      			<button id="btn-digital-mammogram" onclick="Services_List_Trigger(this)" class="Services_Button">Digital Mammogram</button>
+      		</li>
+      		<li>
+      			<button id="btn-digital-OPG" onclick="Services_List_Trigger(this)" class="Services_Button">Digital OPG</button>
+      		</li>
+      		<li>
+      			<button id="btn-clinical-labs" onclick="Services_List_Trigger(this)" class="Services_Button">Clinical Labs</button>
+      		</li>
+      		<li>
+      			<button id="btn-treadmill-test" onclick="Services_List_Trigger(this)" class="Services_Button">Treadmill Test (TMT)</button>
+      		</li>
+      		<li>
+      			<button id="btn-computerized-electrocardiogram" onclick="Services_List_Trigger(this)" class="Services_Button">ECG</button>
+      		</li>
+      		<li>
+      			<button id="btn-nuclear-ventriculography" onclick="Services_List_Trigger(this)" class="Services_Button">RVG</button>
+      		</li>
+      		<li>
+      			<button id="btn-electromyography" onclick="Services_List_Trigger(this)" class="Services_Button">Electromyography</button>
+      		</li>
+      		<li>
+      			<button id="btn-pulmonary-function-test" onclick="Services_List_Trigger(this)" class="Services_Button">Pulmonary Function Test</button>
+      		</li>
+      		<li>
+      			<button id="btn-electroencephalogram" onclick="Services_List_Trigger(this)" class="Services_Button">EEG</button>
+      		</li>
+      		<li>
+      			<button id="btn-nerve-conduction-study" onclick="Services_List_Trigger(this)" class="Services_Button">Nerve Conduction Study</button>
+      		</li>
+		</ul>
+	</div>
+	<div id="CS-Service_Viewer_Col-Right">
+		<div id="CS-Services_Content_Elements-Wrapper">
+			<div id="CS-Services_Content-Text_Content">
+				<h2>3D Multislice Spiral CT</h2>
+				<br>
+				<p>
+					The multi-slice CT scanner refers to a special CT system equipped with a multiple-row detector array to simultaneously collect data at different slice locations. The multi-slice CT scanner has the capability of rapidly scanning large longitudinal (z) volume with high z-axis resolution.<br><br>
+					Spiral multidetector CT uses multiple detectors during continuous motion of the patient through the radiation beam to obtain fine detail images in a short exam time. With rapid administration of intravenous contrast during the CT scan, these fine detail images can be reconstructed into three-dimensional (3D) images of carotid, cerebral, coronary or other arteries.<br><br>
+					The introduction of computed tomography in the early 1970s revolutionized diagnostic radiology by providing Clinicians with images of real three-dimensional anatomic structures. CT scanning has become the test of choice in diagnosing some urgent and emergent conditions, such as cerebral haemorrhage, pulmonary embolism (clots in the arteries of the lungs), aortic dissection (tearing of the aortic wall), appendicitis, diverticulitis, and obstructing kidney stones. Continuing improvements in CT technology, including faster scanning times and improved resolution, have dramatically increased the accuracy and usefulness of CT scanning, which may partially account for increased use in medical diagnosis.
+				</p>
+				<h3>Why it's Done</h3>
+				<p>
+					The Multislice Spiral CT Scan is performed to diagnose a wide range of medical conditions, including but not limited to, tumors, blood clots, abnormal growths, and internal injuries. It is also used to monitor the progression of diseases such as cancer, evaluate the effectiveness of treatments, and guide certain medical procedures.
+				</p>
+			</div>
+			<div id="CS-Services_Content-Image_Slider-Wrapper">
+				<img class="Slider-Image" src="C:\Users\rajku\OneDrive\Desktop\Projects\Crystal Scans\Gallery\Stock Images\st1.jpg">
+				<img class="Slider-Image" src="C:\Users\rajku\OneDrive\Desktop\Projects\Crystal Scans\Gallery\Stock Images\st2.jpg">
+				<img class="Slider-Image" src="C:\Users\rajku\OneDrive\Desktop\Projects\Crystal Scans\Gallery\Stock Images\st3.jpg">
+			</div>
+			<div id="CS-Services_Content-Buttons">
+				<button id="Content-Button-Left">Know More</button>
+				<button id="Content-Button-Right">Book a Test</button>
+			</div>
+		</div>
+	</div>	
+</div>
+</div>
+<script type="text/javascript">
+
+
+function Services_List_Trigger(el) {
+  // Remove the active trigger class and pointer element from all buttons
+  const buttons = document.querySelectorAll('.Services_Button');
+  buttons.forEach(button => {
+    button.classList.remove('SB-Active_Trigger');
+    const li = button.parentElement;
+    if (li) {
+      const pointerElement = li.querySelector('.Services_Button-Pointer_Element');
+      if (pointerElement) {
+        pointerElement.remove();
+      }
+      li.classList.remove('SL-Active_Trigger');
+    }
+  });
+
+  // Add the active trigger class and pointer element to the clicked button
+  el.classList.add('SB-Active_Trigger');
+  const li = el.closest('li');
+  if (li) {
+    li.classList.add('SL-Active_Trigger');
+    li.insertAdjacentHTML('beforeend', '<span class="Services_Button-Pointer_Element"></span>');
+  }
+}
+
+
+
+</script>
+</body>
+</html>

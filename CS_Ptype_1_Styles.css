@@ -1,0 +1,262 @@
+/*
+	|-------------------------------------------------------------|
+	|----------------------------*Info*---------------------------|
+	|-------------------------------------------------------------|
+		Colors : 
+		1) Primary - Dark Bluegreen, #346a81
+		2) Secondary - Light Bluegreen #a6e0e4
+		3) Text Black - #231F20
+		4) Text White - #fafafa
+
+		Text Styles :
+		1) h1:
+			Font Family: Tiempos Headline Regular
+			Font Size: 66px
+			Font Weight: Medium 
+			Letter Spacing: 2px
+			Line Height: 1.2em
+		2) h2:
+			Font Family: Tiempos Headline Regular
+			Font Size: 44px
+			Font Weight: Medium 
+			Letter Spacing: 2px
+			Line Height: 1.2em
+		3) p
+			Font Family: Poppins
+			Font Size: 15px
+			Font Weight: Light 
+			Letter Spacing: 1px
+			Line Height: 1.8em
+	|-------------------------------------------------------------|
+*/
+
+body {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 0px;
+	margin-right: 0px;
+	background-color: #e8f2f5;
+}
+h2 {
+	font-family: 'Tiempos Headine Regular';
+	font-Size: 52px;
+	font-Weight: 200; 
+	letter-Spacing: 2px;
+	line-height: 1.2em;
+	color: #231F20;
+	margin: 0px;
+}
+h3 {
+	font-family: 'Poppins Light';
+	font-Size: 26px;
+	font-weight: 600; 
+	letter-Spacing: 2px;
+	line-height: 1.2em;
+}
+p {
+	font-family: 'Poppins Light';
+	font-Size: 15px;
+	font-weight: 200; 
+	letter-Spacing: 1px;
+	line-height: 1.8em;
+}
+#test-wrapper_1 {
+	display: flex;
+	justify-content: center;
+	background-color: #e8f2f5;
+}
+
+#CS_Service-Viewer-Wrapper {
+	width: 80%;
+	max-width: 1080px;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 2px 15px 15px 5px rgb(50 71 71 / 29%);
+}
+
+/*----The Left Column----*/
+
+
+
+#CS-Service_Viewer_Col-left {
+	width: 25%;
+	background-color: #346a81;
+	height: 650px;
+	z-index: 5;
+}
+
+
+#CS-Service_Viewer_Col-left { /* Scrolling for left column */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    direction: rtl;
+}
+
+#CS-Services_Button_List {
+    direction: ltr; /* Set the direction of the content back to left-to-right */
+    padding-left: 20px; /* Add some padding to the left to account for the scrollbar */
+}
+
+#CS-Services_Button_List li {
+    text-align: left; /* Set the text alignment back to left */
+}
+
+#CS-Service_Viewer_Col-left::-webkit-scrollbar-track {
+    display:none;
+}
+#CS-Service_Viewer_Col-left::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+	background-color:#346a81;
+	max-height:50px!important;
+}
+
+#CS-Service_Viewer_Col-left::-webkit-scrollbar {
+  width: 10px;
+}
+
+#CS-Service_Viewer_Col-left:hover::-webkit-scrollbar-thumb {
+	background-color:#2a586b;
+	transition: opacity 1s;
+
+}
+
+
+ul#CS-Services_Button_List {
+	list-style: none;
+	padding: 20px 0px 20px 0px;
+	margin: 80px 0px 80px 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#CS-Services_Button_List li {
+	display: flex;
+	align-items: center;
+}
+#CS-Services_Button_List li.SL-Active_Trigger {
+	  display: flex;
+	  align-self: flex-end;
+	  transform:translateX(9px);
+}
+
+.Services_Button{
+	width: 100%;
+    margin: 8px 0px 8px 0px;
+    padding: 10px 30px 10px 30px;
+    border: none;
+    font-family: 'Poppins Light';
+    font-size: 15px;
+    font-weight: 400!important;
+    letter-spacing: 1.5px;
+/*    text-align: left;*/
+    line-height: 1.6em;
+    color: white;
+    background-color: transparent;
+}
+
+.SB-Active_Trigger
+{	
+	align-self: flex-end;
+	background-color: #a6e0e4;
+	font-size: 16px;
+	color: #231F20;
+	margin-top:10px!important;
+	margin-bottom:10px!important;
+	padding:12px 26px 12px 26px;
+	border-radius:7px 0px 0px 7px;
+	box-shadow: 8px 15px 25px -5px rgb(50 71 71 / 30%);
+}
+
+.Services_Button-Pointer_Element
+{
+    width: 0;
+    height: 0;
+    z-index: 10;
+    border-style: solid;
+    border-width: 9px 0px 9px 9px;
+    border-color: transparent transparent transparent #a6e0e4;
+
+}
+
+/*----The Right Column----*/
+
+#CS-Service_Viewer_Col-Right {
+	width: 75%;
+	background-color: #fff;
+	box-sizing: border-box;
+	padding: 60px 60px 60px 60px;
+	height: 650px;
+	z-index: 1;
+}
+
+#CS-Service_Viewer_Col-Right { /* Scrolling for right column */
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#CS-Service_Viewer_Col-Right::-webkit-scrollbar-track {
+    display:none;
+}
+#CS-Service_Viewer_Col-Right::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+	background-color:#D3D3D3;
+	max-height:50px!important;
+}
+
+#CS-Service_Viewer_Col-Right::-webkit-scrollbar {
+  width: 6px;
+}
+
+#CS-Services_Content-Image_Slider-Wrapper {
+	display: flex;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.Slider-Image {
+	width: 200px;
+	height: 150px;
+	margin-right: 18px;
+	object-fit: cover;
+	border-radius: 7px;
+	box-shadow: 8px 15px 25px -5px rgb(60 71 71 / 30%);
+}
+
+#CS-Services_Content-Buttons {
+	margin-top: 80px;
+}
+
+#Content-Button-Left {
+	color: #231F20!important;
+    border-width: 0px!important;
+	border-radius: 5px;
+    letter-spacing: 2px;
+    padding: 15px 25px 15px 25px;
+    font-size: 14px;
+    font-family: Poppins Light;
+    text-transform: uppercase!important;
+    background-color: #a6e0e4;
+}
+
+#Content-Button-Left:hover {
+	background-color: #6fcdd3;
+}
+
+#Content-Button-Right {
+	color: #fafafa!important;
+    border-width: 0px!important;
+	border-radius: 5px;
+    letter-spacing: 2px;
+    padding: 15px 25px 15px 25px;
+    font-size: 14px;
+    font-family: Poppins Light;
+    text-transform: uppercase!important;
+    background-color: #346A81;
+}
+
+#Content-Button-Right:hover {
+	background-color: #2a5669;
+}
